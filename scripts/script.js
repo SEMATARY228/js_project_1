@@ -75,6 +75,9 @@ function addCard(inputOne, inputPic, inputTwo) {
 addButton.addEventListener('click', function() {
   let newCard = addCard(inputCity.value, inputPicture.value, inputText.value)
   contentCard.appendChild(newCard)
+  inputCity.value = ""
+  inputPicture.value = ""
+  inputText.value = ""
 })
 
 
