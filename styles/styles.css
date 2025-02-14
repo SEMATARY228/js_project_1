@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "kanit";
+    src: url("./assets/Kanit/Kanit-Black.ttf") format("woff2");
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: "kanit";
+}
+
+.header {
+    display: flex;
+
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 4vh;
+}
+
+.title {
+    text-align: center;
+    padding: 2vw;
+    border-bottom: 0.5px solid black;
+    color: rgb(124, 165, 128);
+    accent-color: 2;
+}
+
+.input {
+    height: 5vh;
+    border-radius: 10px;
+    border: 1px solid green;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid green;
+    color: rgb(116, 116, 106);
+    font-size: 1.2rem;
+}
+
+#btn:active {
+    background-color: rgb(121, 121, 109);
+    color: rgb(83, 83, 76);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(124, 165, 128);
+    border-radius: 10px;
+}
+
+.city {
+    margin: 1vw 0;
+}
+
+
+.pic {
+    max-height: 280px;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.text {
+    margin: 1vw 3vw;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vw;
+    margin: 1vw;
+}
+
+.like_button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.like_active {
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.deleate_button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
