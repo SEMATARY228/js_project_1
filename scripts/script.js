@@ -27,45 +27,25 @@ let addButton = document.getElementById('btn')
 
 
 function addCard(inputOne, inputPic, inputTwo) {
-  let card = document.createElement('div')
-  card.classList.add('card')
-
-  let city = document.createElement('h3')
-  city.textContent = inputOne
-  city.classList.add('city')
-  card.appendChild(city)
-
-  let picture = document.createElement('img')
-  picture.src = inputPic
-  picture.alt = inputTwo
-  picture.classList.add('pic')
-  card.appendChild(picture)
-
-  let text = document.createElement('p')
-  text.textContent = inputTwo
-  text.classList.add('text')
-  card.appendChild(text)
-
-
-  let buttons = document.createElement('div')
-  buttons.classList.add('buttons')
-  card.appendChild(buttons)
-
-  let likeButton = document.createElement('button')
-  likeButton.textContent = '❤️'
-  likeButton.classList.add('like_button')
-  buttons.appendChild(likeButton)
+  const cardTemplate = document.querySelector('#card-template').content;
+  const cardElement = cardTemplate.cloneNode(true);
   
-  likeCard(likeButton)
-  
-  let deleteButton = document.createElement('button')
-  deleteButton.textContent = '💣'
-  deleteButton.classList.add('deleate_button')
-  buttons.appendChild(deleteButton)
+  const card = cardElement.querySelector('.card');
+  const city = cardElement.querySelector('.city');
+  const picture = cardElement.querySelector('.pic');
+  const text = cardElement.querySelector('.text');
+  const likeButton = cardElement.querySelector('.like_button');
+  const deleteButton = cardElement.querySelector('.delete_button');
 
-  deleteCard(deleteButton, card)
+  city.textContent = inputOne;
+  picture.src = inputPic;
+  picture.alt = inputTwo;
+  text.textContent = inputTwo;
 
-  return card
+  likeCard(likeButton);
+  deleteCard(deleteButton, card);
+
+  return card;
 }
 
 
